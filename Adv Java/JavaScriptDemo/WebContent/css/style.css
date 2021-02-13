@@ -1,0 +1,18 @@
+
+body {
+ background-color: #D6EAF8 ;
+}
+
+.formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 40px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
