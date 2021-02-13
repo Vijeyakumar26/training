@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.htc.com/hospital" 
+		xmlns="http://www.htc.com/hospital" 
+		elementFormDefault="qualified">
+
+	<xsd:element name="hospital" type="hospital_ty" />
+	<xsd:complexType name="hospital_ty">
+		<xsd:sequence>
+			<xsd:element name="doctor" type="doctor_ty" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="doctor_ty">
+		<xsd:sequence>
+			<xsd:element name="doctorid" type="xsd:string" />
+			<xsd:element name="doctorname" type="xsd:string" />
+			<xsd:element name="speciality" type="xsd:string" />
+			<xsd:element name="experience" type="xsd:integer" />
+		</xsd:sequence>
+		<xsd:attribute name="regno" type="xsd:string" />
+	</xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees xmlns="http://www.htc.com/employee" 
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		  xsi:schemaLocation="http://www.htc.com/employee employee.xsd">
+		  
+	<employee id="be129">
+        <firstname>Jane</firstname>
+        <title>Engineer</title>
+        <building>327</building>
+        <room>19</room>
+        <supervisor>be131</supervisor>
+    </employee>
+    
+    <employee id="be130">
+        <firstname>Don</firstname>
+        <title>Doctor</title>
+        <building>324</building>
+        <room>13</room>
+        <supervisor>be323</supervisor>
+    </employee>
+    
+    <employee id="be131">
+        <firstname>Dan</firstname>
+        <title>Teacher</title>
+        <building>323</building>
+        <room>12</room>
+        <supervisor>be234</supervisor>
+    </employee>
+
+</employees>
+		  

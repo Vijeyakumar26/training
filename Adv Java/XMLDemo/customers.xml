@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers xmlns="http://www.htc.com/customers"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.htc.com/customers customers.xsd">
+
+		<customer id="C001">
+			<account-no>603318654154</account-no>
+			<customer-name>bala</customer-name>
+			<account-type>savings</account-type>
+			<bank-name>axis</bank-name>
+			<branch>chennai</branch>
+		</customer>
+		
+		<customer id="C0012">
+			<account-no>603318654153</account-no>
+			<customer-name>Pugazh</customer-name>
+			<account-type>savings</account-type>
+			<bank-name>HDFC</bank-name>
+			<branch>chennai</branch>
+		</customer>
+
+</customers>

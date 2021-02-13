@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.htc.com/employee"
+	xmlns="http://www.htc.com/employee"
+	elementFormDefault="qualified">
+
+	<xsd:element name="employees" type="employees_ty" />
+	<xsd:complexType name="employees_ty">
+		<xsd:sequence>
+			<xsd:element name="employee" type="employee_ty"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="employee_ty">
+		<xsd:sequence>
+			<xsd:element name="firstname" type="xsd:string" />
+			<xsd:element name="title" type="xsd:string" />
+			<xsd:element name="building" type="xsd:string" />
+			<xsd:element name="room" type="xsd:integer" />
+			<xsd:element name="supervisor" type="xsd:string" />
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" />
+	</xsd:complexType>
+</xsd:schema>

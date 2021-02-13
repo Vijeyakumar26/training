@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hospital xmlns="http://www.htc.com/hospital">
+    <doctor regno="434343">
+        <doctorid>d01232</doctorid>
+        <doctorname>Rahul</doctorname>
+        <speciality>Heart</speciality>
+        <experience>10</experience>
+    </doctor>
+    <doctor regno="434344">
+        <doctorid>d01233</doctorid>
+        <doctorname>Gokul</doctorname>
+        <speciality>Heart</speciality>
+        <experience>12</experience>
+    </doctor>
+    <doctor regno="434348">
+        <doctorid>d01239</doctorid>
+        <doctorname>Dhananjeyan</doctorname>
+        <speciality>Heart</speciality>
+        <experience>13</experience>
+    </doctor>
+</hospital>

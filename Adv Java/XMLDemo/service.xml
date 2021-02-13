@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.htc.com/service"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.htc.com/service service.xsd">
+
+	<automobile>
+		<type>four-wheeler</type>
+		<name>Ertiga</name>
+		<company>Maruti</company>
+		<kilometer>548720</kilometer>
+	</automobile>
+	
+	<automobile>
+		<type>four-wheeler</type>
+		<name>Xylo</name>
+		<company>Mahindra</company>
+		<kilometer>54800</kilometer>
+	</automobile>
+
+</service>
