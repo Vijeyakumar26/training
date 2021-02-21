@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="customer" class="com.htc.spring.beans.Customer">
+    	<property name="custname" value="ABC Electronics"/>
+    	<property name="contactno" value="994949444"/>
+    	<property name="address" ref="address"/>
+    </bean>
+    
+    <bean id="address" class="com.htc.spring.beans.Address" scope="prototype">
+    	<property name="doorno" value="23/23"/>
+    	<property name="street" value="XYZ Street"/>
+    	<property name="city" value="chennai"/>
+    	<property name="pincode" value="600045"/>
+    </bean>
+
+	<bean id="customer1" class="com.htc.spring.beans.Customer">
+ 		<constructor-arg name="custname" value="Anand Constructions"/>
+ 		<constructor-arg index="1" value="9595959494"/>
+ 		<constructor-arg name="address" ref="address"/>
+    </bean>
+</beans>   
