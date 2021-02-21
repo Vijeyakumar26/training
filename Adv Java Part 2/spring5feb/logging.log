@@ -1,0 +1,21 @@
+2021-02-49 16:04:18 INFO  MainClass:24 - vijay
+  2021-02-49 16:05:45 INFO  MainClass:80 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
+  2021-02-49 16:05:45 INFO  MainClass:80 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:20:35 INFO  MainClass:71 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:20:35 INFO  MainClass:82 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
+  2021-02-49 16:20:35 INFO  MainClass:82 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:30:21 INFO  MainClass:69 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:30:22 INFO  MainClass:80 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
+  2021-02-49 16:30:22 INFO  MainClass:80 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:31:59 INFO  MainClass:69 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:32:00 INFO  MainClass:80 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
+  2021-02-49 16:32:00 INFO  MainClass:80 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:34:58 INFO  MainClass:68 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 16:34:59 INFO  MainClass:76 - true
+  2021-02-49 16:34:59 INFO  MainClass:79 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
+  2021-02-49 16:34:59 INFO  MainClass:79 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 17:52:40 INFO  MainClass:68 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-49 17:52:41 INFO  MainClass:76 - true
+  2021-02-49 17:52:41 INFO  MainClass:79 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
+  2021-02-49 17:52:41 INFO  MainClass:79 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  
