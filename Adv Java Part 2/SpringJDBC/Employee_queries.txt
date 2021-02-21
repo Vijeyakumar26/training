@@ -1,0 +1,27 @@
+CREATE TABLE EMPLOYEES(
+EMPNO INT PRIMARY KEY,
+EMPNAME VARCHAR(20),
+JOB VARCHAR(20),
+SALARY DECIMAL(7,2))
+
+
+TRUNCATE EMPLOYEES
+
+select empno, empname, job, salary from employees
+
+
+CREATE FUNCTION updateEmployee(sal numeric(7,2),eno int)
+RETURNS boolean 
+LANGUAGE plpgsql
+AS
+$$
+DECLARE flag BOOLEAN;
+BEGIN
+
+	UPDATE employees 
+	SET salary=sal 
+	WHERE empno=eno;
+	flag=true;
+        RETURN flag;
+END;
+$$
