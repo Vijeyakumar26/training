@@ -1,0 +1,24 @@
+create table USERS (
+   username VARCHAR(30) NOT NULL,
+   password VARCHAR(100) NOT NULL,
+   first_name VARCHAR(30) NOT NULL,
+   last_name  VARCHAR(30) NOT NULL,
+   email VARCHAR(30) NOT NULL,
+   state VARCHAR(30) NOT NULL,  
+   PRIMARY KEY (username));
+
+
+create table ROLES(
+   roleid INT NOT NULL,
+   type VARCHAR(30) NOT NULL,
+   PRIMARY KEY (roleid),
+   UNIQUE (type)
+);
+
+CREATE TABLE USER_ROLES (
+    user_id varchar(30) NOT NULL,
+    role_id INT NOT NULL,
+    PRIMARY KEY (user_id, role_id),
+    CONSTRAINT FK_APP_USER FOREIGN KEY (user_id) REFERENCES USERS (userid),
+    CONSTRAINT FK_USER_PROFILE FOREIGN KEY (role_id) REFERENCES ROLES (roleid)
+);

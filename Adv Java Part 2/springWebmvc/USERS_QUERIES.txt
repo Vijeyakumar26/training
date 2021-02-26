@@ -1,0 +1,94 @@
+CREATE TABLE USERSS
+(USERNAME VARCHAR(20) PRIMARY KEY,PASSWORD VARCHAR(70), enabled BOOLEAN);
+drop table userss
+
+CREATE TABLE ROLESS
+(ROLE VARCHAR(20) PRIMARY KEY,ROLEDESC VARCHAR(20));
+drop table roless
+
+CREATE TABLE user_roles(
+	USERNAME VARCHAR(20),
+	ROLE VARCHAR(20),
+FOREIGN KEY (USERNAME) REFERENCES USERSS(USERNAME));
+
+drop table user_roles
+ 
+INSERT INTO USERSS (USERNAME,PASSWORD,enabled)
+VALUES('htcuser','$2a$10$jS9vHfwwILZe0JtieIfj9O3mwtcCLycMxnOIvNE6SiY1zLEIC1guS','true');
+
+INSERT INTO USERSS (USERNAME,PASSWORD,enabled)
+VALUES('manager','$2a$10$LTDqgHaBaJBMoNbnl6NDyOAo0sb9Ep2UWiFfS0dOtUBoiqHME.bGu','true');
+
+INSERT INTO USERSS (USERNAME,PASSWORD,enabled)
+VALUES('admin','$2a$10$x3qGe4xdJusnek7txv2fiubAJkNub2vqMqRpgiAw..h2M4P2jOz1W','true');
+
+INSERT INTO USER_ROLES (USERNAME,ROLE)
+VALUES('htcuser','ROLE_EMPLOYEE');
+
+INSERT INTO USER_ROLES (USERNAME,ROLE)
+VALUES('manager','ROLE_MANAGER');
+
+INSERT INTO USER_ROLES (USERNAME,ROLE)
+VALUES('admin','ROLE_ADMIN');
+==================================================================
+create table userss (
+   username VARCHAR(30) NOT NULL,
+   password VARCHAR(100) NOT NULL,
+   enabled boolean NOT NULL,  
+   PRIMARY KEY (username));
+   
+drop table userss
+
+create table roless(
+   roleid INT NOT NULL,
+   roledesc VARCHAR(30) NOT NULL,
+   PRIMARY KEY (roleid));
+
+CREATE TABLE USER_ROLES (
+    user_name varchar(30) NOT NULL,
+    role_id INT NOT NULL,
+    PRIMARY KEY (user_name, role_id),
+    CONSTRAINT FK_APP_USER FOREIGN KEY (user_name) REFERENCES USERSS (username),
+    CONSTRAINT FK_USER_PROFILE FOREIGN KEY (role_id) REFERENCES ROLESS (roleid));
+	
+drop table user_roles
+ 
+INSERT INTO USERSS (USERNAME,PASSWORD,enabled)
+VALUES('htcuser','$2a$10$jS9vHfwwILZe0JtieIfj9O3mwtcCLycMxnOIvNE6SiY1zLEIC1guS','true');
+
+INSERT INTO USERSS (USERNAME,PASSWORD,enabled)
+VALUES('manager','$2a$10$LTDqgHaBaJBMoNbnl6NDyOAo0sb9Ep2UWiFfS0dOtUBoiqHME.bGu','true');
+
+INSERT INTO USERSS (USERNAME,PASSWORD,enabled)
+VALUES('admin','$2a$10$x3qGe4xdJusnek7txv2fiubAJkNub2vqMqRpgiAw..h2M4P2jOz1W','true');
+
+INSERT INTO roless (roleid,roledesc)
+VALUES(1,'ROLE_EMPLOYEE');
+
+INSERT INTO roless (roleid,roledesc)
+VALUES(2,'ROLE_MANAGER');
+
+INSERT INTO roless (roleid,roledesc)
+VALUES(3,'ROLE_ADMIN');
+
+INSERT INTO USER_ROLES(USER_NAME,ROLE_ID)
+VALUES('htcuser',1);
+
+INSERT INTO USER_ROLES (USER_NAME,ROLE_ID)
+VALUES('manager',2);
+INSERT INTO USER_ROLES (USER_NAME,ROLE_ID)
+VALUES('manager',1);
+
+INSERT INTO USER_ROLES (USER_NAME,ROLE_ID)
+VALUES('admin',3);
+INSERT INTO USER_ROLES (USER_NAME,ROLE_ID)
+VALUES('admin',2);
+INSERT INTO USER_ROLES (USER_NAME,ROLE_ID)
+VALUES('admin',1);
+
+SELECT * FROM user_roles
+SELECT * FROM roless
+SELECT * FROM userss
+
+TRUNCATE USERSS
+TRUNCATE roless
