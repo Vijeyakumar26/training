@@ -6,4 +6,13 @@
   2021-02-47 14:38:56 DEBUG XmlBeanDefinitionReader:393 - Loaded 3 bean definitions from class path resource [ApplicationContext.xml]
   2021-02-47 14:38:56 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'customer'
   2021-02-47 14:38:56 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'customer1'
+  2021-02-58 21:14:03 DEBUG ClassPathXmlApplicationContext:634 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d
+  2021-02-58 21:14:05 DEBUG XmlBeanDefinitionReader:393 - Loaded 3 bean definitions from class path resource [ApplicationContext.xml]
+  2021-02-58 21:14:05 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'customer'
+  2021-02-58 21:14:06 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'customer1'
+  2021-02-58 22:15:45 DEBUG ClassPathXmlApplicationContext:634 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d
+  2021-02-58 22:16:13 DEBUG ClassPathXmlApplicationContext:634 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d
+  2021-02-58 22:16:13 DEBUG XmlBeanDefinitionReader:393 - Loaded 3 bean definitions from class path resource [ApplicationContext.xml]
+  2021-02-58 22:16:13 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'customer'
+  2021-02-58 22:16:13 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'customer1'
   

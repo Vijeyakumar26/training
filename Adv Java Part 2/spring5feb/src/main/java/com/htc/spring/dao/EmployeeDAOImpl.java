@@ -6,28 +6,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
+import org.springframework.stereotype.Repository;
 
 import com.htc.spring.beans.Employee;
 
+//@Repository
 public class EmployeeDAOImpl implements EmployeeDAO 
 {
+	@Autowired //by type
 	JdbcTemplate jdbcTemplate;
 
-	public JdbcTemplate getJdbcTemplate() {
-		return jdbcTemplate;
-	}
-
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
-
-	@Override
 	public boolean addEmployee(Employee emp) {
 
 		int result = jdbcTemplate.update("insert into employees values(?,?,?,?)", emp.getEmpno(), emp.getEname(), emp.getJob(), emp.getSalary());
@@ -37,12 +32,12 @@ public class EmployeeDAOImpl implements EmployeeDAO
 		return false;
 	}
 
-	@Override
+	
 	public boolean addEmployee(int empno, String ename, String job, double salary) {
 		return addEmployee(new Employee(empno,ename, job, salary));
 	}
 
-	@Override
+	
 	public Employee getEmployee(int empno) {
 
 		Employee emp = null;
@@ -86,7 +81,6 @@ public class EmployeeDAOImpl implements EmployeeDAO
 		return empList;
 	}
 
-	@Override
 	public boolean deleteEmployee(int empno) {
 
 		NamedParameterJdbcTemplate npjt = new NamedParameterJdbcTemplate(jdbcTemplate);
@@ -100,7 +94,6 @@ public class EmployeeDAOImpl implements EmployeeDAO
 		return false;
 	}
 
-	@Override
 	public boolean updateEmployee(int empno,double sal) 
 	{
 		SimpleJdbcCall jdbccall = new SimpleJdbcCall(jdbcTemplate).withFunctionName("updateEmployee"); 

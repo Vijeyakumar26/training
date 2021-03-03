@@ -1,0 +1,7 @@
+
+Feb 25, 2021 13:17:19.78 NEW SESSION
+Feb 25, 2021 13:17:19.78 [GFX1-]: shader-cache: Timed out before finishing loads
+Feb 25, 2021 13:17:19.80 [ERROR webrender_bindings::program_cache] shader-cache: Timed out before finishing loads
+Feb 25, 2021 13:22:15.85 
+Feb 25, 2021 13:22:15.85 ###!!! [Child][MessageChannel] Error: (msgtype=0x5F0005,name=PImageBridge::Msg_WillClose) Channel error: cannot send/recv
+Feb 25, 2021 13:22:15.85 

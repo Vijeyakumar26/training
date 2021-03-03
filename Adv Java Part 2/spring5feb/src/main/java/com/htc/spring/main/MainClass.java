@@ -10,6 +10,7 @@ import org.springframework.dao.DataAccessException;
 
 import com.htc.spring.beans.Employee;
 import com.htc.spring.config.BeansConfig;
+import com.htc.spring.config.TxConfig;
 import com.htc.spring.dao.EmployeeDAO;
 
 public class MainClass 
@@ -22,6 +23,8 @@ public class MainClass
 		Logger log = Logger.getLogger(MainClass .class);
 		
 		ApplicationContext context = new AnnotationConfigApplicationContext(BeansConfig.class);
+		
+		//ApplicationContext context = new AnnotationConfigApplicationContext(TxConfig.class);
 
 //		ApplicationContext context = new ClassPathXmlApplicationContext("jdbc.xml");
 

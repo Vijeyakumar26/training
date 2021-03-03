@@ -1,0 +1,10 @@
+package com.htc.webservice.client;
+
+public class SOAPClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

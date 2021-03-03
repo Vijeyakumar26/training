@@ -1,0 +1,74 @@
+package com.htc.springrest.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.htc.springrest.resource.TouristPlace;
+
+@Repository
+public class TouristDAOImpl implements TouristDAO{
+
+	@Autowired //by type
+	JdbcTemplate jdbcTemplate;
+	
+//	//Datastore
+//	List<TouristPlace> touristPlaces = new ArrayList<TouristPlace>();
+
+//	public TouristDAOImpl() {
+//		touristPlaces.add(new TouristPlace("Mysore", "Mysore", "Karnataka", new String[] {"MySore Palace", "Zoo", "Bird Sanctury","Temple"}));
+//		touristPlaces.add(new TouristPlace("Bangalore", "Bangalore", "Karnataka", new String[] {"Park", "Temple"}));
+//		touristPlaces.add(new TouristPlace("Cochin", "Cochin", "Kerala", new String[] {"Back waters", "Park", "Bird Sanctury","Temple"}));
+//	}
+	
+	 public TouristDAOImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public TouristPlace getTouristPlace(String placeName) {
+
+		TouristPlace place = null;
+		for(TouristPlace tp: touristPlaces) {
+			if(tp.getPlaceName().equals(placeName)) {
+				place = tp;
+				break;
+			}
+		}
+		return place;
+
+	}
+
+	@Override
+	public List<TouristPlace> getAllTouristPlaces(String state) {
+
+		List<TouristPlace> placeList = new ArrayList<TouristPlace>();
+		for(TouristPlace tp : touristPlaces) {
+			if(tp.getState().equals(state)) {
+				placeList.add(tp);
+			}
+		}
+		return placeList;
+
+	}
+
+	@Override
+	public boolean addTouristPlace(TouristPlace place) {
+		touristPlaces.add(place);
+		return true;
+	}
+
+	@Override
+	public boolean updateTouristPlace(String placeName, TouristPlace tp) {
+		return false;
+	}
+
+	@Override
+	public boolean deleteTouristPlace(String placeName) {
+		return touristPlaces.deleteTouristPlace(placeName);
+	}
+
+}

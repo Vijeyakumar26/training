@@ -18,4 +18,9 @@
   2021-02-49 17:52:41 INFO  MainClass:76 - true
   2021-02-49 17:52:41 INFO  MainClass:79 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
   2021-02-49 17:52:41 INFO  MainClass:79 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-53 15:21:49 INFO  MainClass:75 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
+  2021-02-53 15:21:50 INFO  MainClass:83 - true
+  2021-02-53 15:21:50 INFO  MainClass:87 - Employee [empno=102, ename=Gokul, job=QA, salary=45000.0]
+  2021-02-53 15:21:50 INFO  MainClass:87 - Employee [empno=104, ename=ishore, job=Trainer, salary=67000.0]
+  2021-02-53 15:21:50 INFO  MainClass:87 - Employee [empno=101, ename=DJ, job=SDE, salary=51000.0]
   

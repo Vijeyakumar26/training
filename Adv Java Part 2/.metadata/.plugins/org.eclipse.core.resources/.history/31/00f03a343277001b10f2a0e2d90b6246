@@ -1,0 +1,5 @@
+package com.htc.springmvc.exceptions;
+
+public class MyExceptionHandler {
+
+}

@@ -1,0 +1,6 @@
+1614060423219	Move 'index.jsp' to 'views'
+1614061929476	Move 'ApplicationContext.xml' to 'WEB-INF'
+1614145234348	Rename package 'com.htc.spring.service'
+1614145251490	Rename package 'com.htc.spring.beans'
+1614145398687	Rename package 'com.htc.springmvc.beans'
+1614145897469	Move 'connection.properties' to 'resources'

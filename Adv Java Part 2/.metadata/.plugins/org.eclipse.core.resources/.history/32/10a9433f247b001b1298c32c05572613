@@ -1,0 +1,17 @@
+package com.htc.webservice.client;
+
+import com.htc.webservice.helper.TouristService;
+import com.htc.webservice.helper.TouristServiceImplService;
+
+public class SOAPClient {
+
+	public static void main(String[] args) {
+		TouristServiceImplService service = new TouristServiceImplService();
+		TouristService ts = service.getTouristServiceImplPort();
+	
+		ts.getAllTouristPlaces("karnatala");
+		ts.getTouristPlaceDetails("");
+
+	}
+
+}

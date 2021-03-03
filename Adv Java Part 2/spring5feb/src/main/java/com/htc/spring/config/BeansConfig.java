@@ -39,7 +39,7 @@ public class BeansConfig {
 	public EmployeeDAOImpl  getemployeeDAO(){
 
 		EmployeeDAOImpl employeeDAO = new EmployeeDAOImpl();		
-		employeeDAO.setJdbcTemplate(jdbcTemplate());
+		//employeeDAO.setJdbcTemplate(jdbcTemplate());
 
 		return employeeDAO;		
 

@@ -1,0 +1,65 @@
+package com.htc.springmvc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.htc.springmvc.model.Employee;
+import com.htc.springmvc.service.EmployeeService;
+@Controller
+public class EmployeeController 
+{
+	@Autowired
+	EmployeeService empService ;
+
+	//	@GetMapping("/addEmployeeForm")
+	//	public String addEmployeeForm(){
+	//		return "addEmployeeForm";
+	//	}
+	//	
+	//	@PostMapping("/addEmployee")
+	//	public String addEmployee(){
+	//		return "addedSuccessfully";
+	//	}
+	//	
+
+	
+	//@RequestMapping(value="/addUserForm", method=RequestMethod.GET)
+	@GetMapping("/addEmployeeForm")
+	public String showEmployeeForm(Model model) 
+	{
+		model.addAttribute("emp", new Employee());
+		return "addEmployeeForm";
+	}
+	
+
+	@PostMapping("/addEmployee")  // spring 4.x onwards
+	public String addEmployee(@ModelAttribute(name="emp") Employee emp, RedirectAttributes attrs) 
+	{
+		System.out.println(emp.toString());
+		boolean result = empService.addEmployee(emp);
+		System.out.println(result);
+		if(result)
+			return "addEmpSuccess";
+		else
+			return "addEmployeeForm";
+	}
+
+	//search
+	@GetMapping(value="/searchEmp")
+	public String searchEmployee()
+	{
+		return "search";
+	}
+
+	//listAllEmp
+	@GetMapping(value="/listEmp")
+	public String listEmployee()
+	{
+		return "list";
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.htc.webservice;
+
+import javax.jws.WebService;
+
+@WebService
+public interface TouristService 
+{
+	@WebMethod(operationName="getTouristPlaceDetails")
+	public @WebResult(name="touristPlace") TouristPlace locateTouristPlace(@WebParam(name="placeName") String touristPlace);
+	
+	@WebMethod(operationName ="getAllTouristPlaces")
+	public @WebResult(name="placeList") List<TouristPlace> findTouristPlaces(@WebParam(name="state") String state);
+}
