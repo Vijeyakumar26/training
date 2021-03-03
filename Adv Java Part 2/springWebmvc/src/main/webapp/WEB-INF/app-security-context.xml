@@ -25,8 +25,9 @@
 		<security:jdbc-user-service id="jdbcUserService"
 									data-source-ref="dataSource" 
 									users-by-username-query="select username, password, enabled from userss where username=?" 
-									authorities-by-username-query="select user_name, role_id from user_roles where user_name=?"/>		
-
+									authorities-by-username-query="SELECT ur.user_name, r.roledesc FROM USER_ROLES UR JOIN ROLESS R ON ur.role_ur = r.role WHERE ur.user_name=? "/>		
+		
+		<!-- select user_name, role_ur from user_roles where user_name= ? --> 
 		<security:authentication-manager>
 			<security:authentication-provider user-service-ref="jdbcUserService"/>
 		</security:authentication-manager>
@@ -37,7 +38,7 @@
 		<security:http pattern="/favicon.ico" security="none"/>
 		<security:http pattern="/static/*" security="none"/>
 		
-		<security:http auto-config="true">
+	 	<security:http auto-config="true">
 			<security:intercept-url pattern="/" access="hasRole('EMPLOYEE')"/>
 			<security:intercept-url pattern="/addEmployeeForm" access="hasRole('EMPLOYEE')"/>
 			<security:intercept-url pattern="/addEmployee" access="hasRole('EMPLOYEE')"/>
@@ -46,7 +47,8 @@
 			<security:intercept-url pattern="/getEmployee" access="hasRole('MANAGER')"/>
 			<security:intercept-url pattern="/listEmps" access="hasRole('ADMIN')"/>
 			
-	<!-- <security:http auto-config="true">
+			
+	<!--   <security:http auto-config="true">
 	<security:intercept-url pattern="/" access="hasAnyRole('EMPLOYEE','ADMIN','MANAGER')"/>
 	<security:intercept-url pattern="/employeeForm" access="hasAnyRole('EMPLOYEE','ADMIN')"/>
 	<security:intercept-url pattern="/addEmployee" access="hasAnyRole('EMPLOYEE','ADMIN')"/>
@@ -54,10 +56,9 @@
 	<security:intercept-url pattern="/searchEmpForm" access="hasAnyRole('MANAGER','ADMIN')"/>
 	<security:intercept-url pattern="/getEmployee" access="hasAnyRole('MANAGER','ADMIN')"/>
 	<security:intercept-url pattern="/listEmps" access="hasRole('ADMIN')"/>
-	<security:intercept-url pattern="/deleteemp/*" access="hasRole('ADMIN')"/>-->
+	<security:intercept-url pattern="/deleteemp/*" access="hasRole('ADMIN')"/>	-->
 			
-			
-			<security:access-denied-handler error-page="/accessDenied"/>
+		<security:access-denied-handler error-page="/accessDenied"/>
 			
 			<security:form-login login-page="/login"
 								 username-parameter="username"	
